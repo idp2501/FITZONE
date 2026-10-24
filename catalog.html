@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог товарів — FITZONE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">FITZONE · ОБИРАЙ СВОЄ СПОРТИВНЕ СПОРЯДЖЕННЯ</div>
+
+<header class="header">
+    <a href="index.html" class="logo">FIT<span>ZONE</span>.</a>
+
+    <nav>
+        <a href="index.html">Головна</a>
+        <a href="catalog.html" class="active">Каталог</a>
+        <a href="contacts.html">Контакти</a>
+    </nav>
+
+    <a href="catalog.html" class="cart-link">
+        Кошик <span id="cart-count">0</span>
+    </a>
+</header>
+
+<main>
+    <section class="catalog-hero">
+        <div class="container">
+            <p class="eyebrow">ЗНАЙДИ СВОЄ СПОРЯДЖЕННЯ</p>
+            <h1>Твій інвентар.<br><span>Твої правила.</span></h1>
+            <p>Обирай обладнання для будь-яких тренувань.</p>
+        </div>
+    </section>
+
+    <section class="catalog-section container">
+        <div class="catalog-toolbar">
+            <input
+                type="search"
+                id="product-search"
+                placeholder="⌕ Пошук товару..."
+                aria-label="Пошук товару">
+
+            <span id="results-count">Знайдено товарів: 30</span>
+        </div>
+
+        <div class="filters">
+            <button class="filter active" data-filter="all">Усі товари</button>
+            <button class="filter" data-filter="training">Силові тренування</button>
+            <button class="filter" data-filter="cardio">Кардіо</button>
+            <button class="filter" data-filter="accessories">Аксесуари</button>
+        </div>
+
+        <div id="catalog-products" class="product-grid"></div>
+
+        <div class="catalog-note">
+            <h3>Не знайшла потрібний товар?</h3>
+            <p>Напиши нам — допоможемо зорієнтуватися в асортименті.</p>
+            <a href="contacts.html" class="button">Зв'язатися з нами ↗</a>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer-main">
+        <div>
+            <a href="index.html" class="logo footer-logo">FIT<span>ZONE</span>.</a>
+            <p>Твій простір для сили, енергії та нових досягнень.</p>
+        </div>
+        <div class="footer-nav">
+            <a href="index.html">Головна</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="contacts.html">Контакти</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2026 FITZONE. Навчальний проєкт.</span>
+        <span>MOVE YOUR WAY.</span>
+    </div>
+</footer>
+
+<div id="product-modal" class="modal">
+    <div class="modal-content">
+        <button class="modal-close" aria-label="Закрити">&times;</button>
+        <img id="modal-image" src="" alt="">
+        <div class="modal-info">
+            <p class="eyebrow" id="modal-category"></p>
+            <h2 id="modal-name"></h2>
+            <p id="modal-description"></p>
+            <h3 id="modal-price"></h3>
+            <button id="modal-add" class="button">Додати до кошика +</button>
+        </div>
+    </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
