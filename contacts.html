@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти — FITZONE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">FITZONE · МИ НА ЗВ'ЯЗКУ</div>
+
+<header class="header">
+    <a href="index.html" class="logo">FIT<span>ZONE</span>.</a>
+
+    <nav>
+        <a href="index.html">Головна</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="contacts.html" class="active">Контакти</a>
+    </nav>
+
+    <button type="button" class="cart-link" data-open-cart>
+        Кошик <span id="cart-count">0</span>
+    </button>
+</header>
+
+<main>
+    <section class="catalog-hero">
+        <div class="container">
+            <p class="eyebrow">FITZONE SUPPORT</p>
+            <h1>Маєш питання?<br><span>Напиши нам.</span></h1>
+            <p>Допоможемо знайти обладнання для твоїх цілей.</p>
+        </div>
+    </section>
+
+    <section class="contact-section container">
+        <div class="contact-info">
+            <p class="eyebrow">МИ ГОТОВІ ДОПОМОГТИ</p>
+            <h2>Твій наступний крок починається тут.</h2>
+            <p>
+                Не знаєш, що вибрати для домашнього спортзалу?
+                Маєш пропозицію щодо сайту? Залиш повідомлення у формі.
+            </p>
+
+            <div class="contact-detail">
+                <span class="contact-icon">✉</span>
+                <div>
+                    <strong>Електронна пошта</strong>
+                    <p>hello@fitzone.example</p>
+                </div>
+            </div>
+
+            <div class="contact-detail">
+                <span class="contact-icon">◷</span>
+                <div>
+                    <strong>Графік роботи</strong>
+                    <p>Понеділок — п'ятниця, 09:00–18:00</p>
+                </div>
+            </div>
+
+            <div class="contact-detail">
+                <span class="contact-icon">↗</span>
+                <div>
+                    <strong>Консультація</strong>
+                    <p>Допомога з вибором спортивного обладнання.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-form-box">
+            <p class="eyebrow">ЗВОРОТНИЙ ЗВ'ЯЗОК</p>
+            <h2>Залиш повідомлення</h2>
+
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Твоє ім'я *</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        minlength="2"
+                        placeholder="Як до тебе звертатися?">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Електронна пошта *</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        placeholder="name@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="topic">Тема повідомлення</label>
+                    <select id="topic" name="topic">
+                        <option>Підбір товару</option>
+                        <option>Запитання про каталог</option>
+                        <option>Пропозиція щодо сайту</option>
+                        <option>Інше</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Повідомлення *</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        required
+                        minlength="8"
+                        placeholder="Напиши своє запитання..."></textarea>
+                </div>
+
+                <button type="submit" class="button">Надіслати ↗</button>
+
+                <p class="form-note">
+                    Це навчальний сайт. Повідомлення зберігається локально
+                    у браузері, а не надсилається на реальну пошту.
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <section class="faq-section container">
+        <p class="eyebrow">FAQ</p>
+        <h2>Часті запитання.</h2>
+
+        <div class="faq-grid">
+            <article>
+                <h3>Як знайти товар?</h3>
+                <p>Відкрий каталог і скористайся пошуком або фільтрами категорій.</p>
+            </article>
+
+            <article>
+                <h3>Як працює кошик?</h3>
+                <p>Натисни кнопку «+» біля товару. Кількість збережеться у браузері.</p>
+            </article>
+
+            <article>
+                <h3>Чи можна оформити замовлення?</h3>
+                <p>Наразі це демонстраційний проєкт без реальної оплати та доставки.</p>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer-main">
+        <div>
+            <a href="index.html" class="logo footer-logo">FIT<span>ZONE</span>.</a>
+            <p>Твій простір для сили, енергії та нових досягнень.</p>
+        </div>
+        <div class="footer-nav">
+            <a href="index.html">Головна</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="contacts.html">Контакти</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2026 FITZONE. Навчальний проєкт.</span>
+        <span>MOVE YOUR WAY.</span>
+    </div>
+</footer>
+
+<div id="cart-modal"></div>
+<div id="toast" class="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
